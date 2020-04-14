@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=" utf-8" />
+		<meta name=" viewport" content="width=device-width, initial-scale= 1.0" />
+		<title>Brouwerij Kwartje</title>
+		<link rel="stylesheet" type="text/css" href="bierproeverij.css">
+		<script type="text/javascript">
+			function validation(){   //functie validation wordt aangemaakt zonder parameter
+			
+				var name = document.getElementById('name').value; //variabele name wordt aangemaakt en het element wordt aangeroepen met Id 'name'
+				var email = document.getElementById('email').value; //variabele email wordt aangemaakt en het element wordt aangeroepen met Id 'email'
+				var telefoonnummer = document.getElementById('telefoonnummer').value; //variabele telefoonnummer wordt aangemaakt en het element wordt aangeroepen met Id 'telefoonnummer'
+				var date = document.getElementById('date').value; //variabele date wordt aangemaakt en het element wordt aangeroepen met Id 'date'
+				var tijd = document.getElementById('tijd').value; //variabele tijd wordt aangemaakt en het element wordt aangeroepen met Id 'tijd'
+				var personen = document.getElementById('personen').value; //variabele personen wordt aangemaakt en het element wordt aangeroepen met Id 'personen'
+				var choice1 = document.getElementById ("alcohol").checked; //variabele choice1 wordt aangemaakt en het element wordt aangeroepen met Id 'alcohol'
+				var choice2 = document.getElementById ("nonalcohol").checked; //variabele choice2 wordt aangemaakt en het element wordt aangeroepen met Id 'nonalcohol'
+				var biertal = document.getElementById('biertal').value; //variabele biertal wordt aangemaakt en het element wordt aangeroepen met Id 'biertal'
+				var privacyverklaring = document.getElementById('privacyverklaring').value; //variabele privacyverklaring wordt aangemaakt en het element wordt aangeroepen met Id 'privacyverklaring'
+				
+				
+				
+				if (name == ""){   //Als het veld 'Naam' leeg is
+					document.getElementById('naam').innerHTML = "Uw naam is vereist*"; //geef melding
+						return false;
+				}
+				
+				if(!isNaN(name)){   //Als het veld 'Naam' cijfers bevat
+					document.getElementById('username').innerHTML = "Uw naam bevat geen cijfers*";  //geef melding
+						return false;
+				}
+				
+					
+				if (email == ""){  //Als het veld 'Email' leeg is
+					document.getElementById('emailadres').innerHTML = "Uw e-mailadres is vereist*";  //geef melding
+						return false;
+				}
+				
+				if (email.indexOf('@') <=0){  //Als het veld 'Email' geen '@' heeft
+					document.getElementById('emailadres').innerHTML = "Uw e-mailadres is ongeldig*";   //geef melding
+						return false;
+				}
+				
+				
+				if(telefoonnummer == ""){  //Als het veld 'Telefoonnummer' leeg is  
+					document.getElementById('telnummer').innerHTML = "Uw telefoonnummer is vereist*";   //geef melding
+						return false;
+				}
+				
+				if(isNaN(telefoonnummer)){   //Als het veld 'Telefoonnummer' letters bevat
+					document.getElementById('telnummer').innerHTML = "Uw telefoonnummer bevat alleen cijfers*";   //geef melding
+						return false;
+				}
+				
+				/*Telefoonnummers beginnen altijd met '06'of '316' dus het kunnen 10 of 11 cijfers bevatten*/
+				if((telefoonnummer.length <10) || (telefoonnummer.length >11)){   //Als het veld 'Telefoonnummer' minder dan 10 of meer dan 11 cijfers bevat
+					document.getElementById('telnummer').innerHTML = "Uw telefoonnummer is ongeldig*";   //geef melding
+						return false;
+				}
+			
+					
+				if (date == ""){   //Als er geen datum is geselecteerd
+					document.getElementById('datum').innerHTML = "Kies een datum*";  //geef melding
+						return false;
+				}
+				
+				
+				if (tijd == "selecteertijd") {   //Als er geen tijd is geselecteerd
+					document.getElementById("time").innerHTML="Kies een tijd*";   //geef melding
+					return false;
+				}
+				
+				if (personen == "selecteerpersonen") {  //Als er geen aantal personen zijn geselecteerd 
+				document.getElementById("person").innerHTML="Kies het aantal personen*";   //geef melding
+				return false;
+				}
+				
+				if ((choice1=="") && (choice2=="")){   //Als één van de keuzes of beide keuzes niet zijn geselecteerd
+					document.getElementById("alcoholkeus").innerHTML="Selecteer uw keuze(s)*";   //geef melding
+					return false;
+				}
+				
+				
+				if (biertal == "selecteerbier") {   //Als het aantal bier niet is geselecteerd
+					document.getElementById("beer").innerHTML="Kies het aantal bieren*"; //geef melding
+					return false;
+				}
+				
+				 if(!document.getElementById('privacyverklaring').checked){  //Als de privacyverklaring niet is aangevinkt
+					document.getElementById("accepted").innerHTML="Accepteer de privacyverklaring*";   //geef melding
+					return false;
+				}
+				else { // Anders
+					alert("Uw aanmelding is succesvol afgerond!"); // geef melding dat het succesvol is afgerond
+				}
+			}
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<!-- Hier wordt de header aangemaakt met de logo en navigatie erin -->
+		<header>
+			<nav>
+				<!--Logo afbeelding wordt toegevoegd-->
+				<center><img src="logo.png" width="178" height="140" align="middle"/></center>
+				<!-- Unordered list wordt aangemaakt -->
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="bieren.html">Bieren</a></li>
+					<li><a href="nonalcohol.html">0,0% Bieren</a></li> 
+						<li><a href="" id="meer">Meer</a>
+							<ul><!-- Unordered list van Meer wordt aangemaakt -->
+								<li><a href="bierproeverij.html">Bierproeverij</a></li>
+								<li><a href="review.html">Review</a></li>
+								<li><a href="overons.html">Over Ons</a></li>
+							</ul>
+						</li>
+				</ul>
+			</nav>
+		</header><!-- Einde header -->
+
+		
+		<main><!-- Dit is de main content -->
+		<h1>Bierproeverij</h1>
+		<span id="titel"> _________________</span>
+		
+		<!-- Hieronder wordt een klein introductie geschreven over het bierproeverij -->
+		<div class="text">
+				<p>Brouwerij Kwartje heeft sinds kort ook een proeverij gelanceerd! Daarbij bent u samen met uw vrienden en familie van harte welkom om bij 
+				ons een proeverij te doen. U heeft de kans om de bieren te ruiken, kijken en proeven. Maar dat is zeker niet alles. Wij hebben ook een aantal 
+				non-alcoholische drankjes voor u. 
+				</p> 
+		</div>
+		
+		<!-- Hieronder zijn de tarieven aangegeven voor het bier proeven -->
+		<div class="tarieven_voorwaarden">
+			<p>TARIEVEN</P>
+			<br><br><br>
+			<p>2 BIEREN                 €9,95,- P.P<br>
+				4 BIEREN                €14,95,- P.P<br>
+				7 BIEREN                €22,95,- P.P<br>
+			<br>
+			* Dit geldt ook voor de 0,0% bieren
+			</p>
+		</div>
+	
+		<!-- Hieronder zijn de voorwaarden aangegeven voor het bier proeven -->
+		<div class="tarieven_voorwaarden">
+			<p>VOORWAARDEN<br><br><br>
+			
+			- Deelnemers moeten 18+ zijn<br>
+			- Minimaal 5 deelnemers
+			</p>
+		</div>
+		
+		<!-- Het aanmeldformulier wordt hieronder aangemaakt -->
+		<span>________________________________________________________________________________________________________________________</span>
+		<h1>aanmelden</h1>
+		<span id="titel"> _________________</span>
+		
+		<!-- formulier wordt aangemaakt -->
+		<div class="form"> 
+		<form id="form" method="get" action="#" onsubmit="return validation()" >
+			
+			<!-- Naam veld wordt aangemaakt -->
+			<label for="name">NAAM*</label><br>
+			<input type="text" id="name" name="user" />
+			<span id="naam" class="validation"></span>
+			<br><br><br><br>
+			
+			<!--Email veld wordt aangemaakt -->	
+			<label for="email">E-MAIL*</label><br>
+			<input type="text" id="email" name="email" />
+			<span id="emailadres" class="validation"></span>
+			<br><br><br><br>
+			
+			<!-- Telefoonnummer veld wordt aangemaakt -->
+			<label for="telefoonnummer">TELEFOONNUMMER*</label><br>
+			<input type="text" id="telefoonnummer" name="telefoonnummer" />
+			<span id="telnummer" class="validation"></span>
+			<br><br><br><br>
+			
+			<!-- Datum prikker wordt aangemaakt -->	
+			<label for="datum">DATUM*</label><br>
+			<input type="date" id="date" name="date" />
+			<span id="datum" class="validation"></span>
+			<br><br><br><br>
+			
+			<!-- Tijd optie wordt aangemaakt -->
+			<label for="tijd">TIJD*</label><br><br>
+			<select id="tijd" >
+				<option value="selecteertijd">Selecteer uw keuze</option>
+				<option value="12">12:00</option>
+				<option value="14">14:00</option>
+				<option value="16">16:00</option>
+				<option value="18">18:00</option>
+				<option value="20">20:00</option>
+			</select>
+			<span id="time" class="validation"></span>
+			<br><br><br><br>
+			
+			<!-- Keuze aantal personen optie wordt aangemaakt -->		
+			<label for="personen">AANTAL PERSONEN*</label><br><br>
+			<select id="personen">
+				<option value="selecteerpersonen">Selecteer uw keuze</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+			<span id="person" class="validation"></span>
+			<br><br><br><br>
+			
+			<!-- Keuze tussen alcohol en non-alcoholische bier checkbox wordt aangemaakt -->	
+			<label for="biersoort">BIERSOORT*</label><br><br>
+			<label>MET ALCOHOL
+			<input type="checkbox" id="alcohol" name="checkbox"/>
+			</label>
+			<label>ZONDER ALCOHOL
+			<input type="checkbox" id="nonalcohol" name="checkbox"/>
+			</label>
+			<span id="alcoholkeus" class="validation"></span>
+			<br><br><br><br>
+			
+			<!-- Keuze aantal bieren proeven wordt aangemaakt -->
+			<label for="biertal">AANTAL BIEREN*</label><br><br>
+			<select id="biertal">
+				<option value="selecteerbier">Selecteer uw keuze</option>
+				<option value="2">2</option>
+				<option value="4">4</option>
+				<option value="7">7</option>
+			</select>
+			<span id="beer" class="validation"></span>
+			<br><br><br><br>
+			
+			<!-- Opmerking tekstvak wordt aangemaakt -->
+			<label for="opmerking">OPMERKING</label><br><br>
+			<textarea id="opmerking" rows="6" cols="60" placeholder="Typ hier uw tekst..."></textarea>
+			<br><br><br><br>
+			
+			<!-- Privacyverklaring check wordt aangemaakt-->
+			<label for="privacyverklaring">PRIVACYVERKLARING*</label>
+			<input type="checkbox" id="privacyverklaring" name="privacyverklaring" value="privacyverklaring" />
+			<span id="accepted" class="validation"></span>
+			<br><br><br>
+			
+			<!-- Verzend button wordt aangemaakt-->
+			<button>VERZENDEN >></button>
+			
+		</form>
+		</div>
+		<!--Einde formulier-->
+		</main><!--Einde main content-->
+		
+		<!--Footer wordt aangemaakt met contactinformatie erin -->
+		<footer>
+			<!-- Adres gegevens wordt hier getoond-->
+			<section>
+				<div class="contact adres">
+					<p id="adres">ADRES</p><br>
+					<p>Zamenhofstraat 90 <br>
+					2518LB Den Haag</p>
+				</div>
+			</section>
+			
+			<!--Aanmeldbutton wordt hier nogmaals weergegeven -->
+			<section>
+				<div class="contact aanmelden">
+					<p id="aanmelden">MELD JE AAN VOOR EEN PROEVERIJ!</p><br>
+					<a href="bierproeverij.html" id="button"> AANMELDEN >></a>
+				</div>
+			</section>
+			
+			<!--Emailadres wordt hier getoond-->
+			<section>
+				<div class="contact email">
+					<p id="email">EMAIL</p><br>
+					<p>brouwerijkwartje@gmail.com</p>
+				</div>
+			</section>
+			
+			<!--Social media links worden hier getoond-->
+			<div class="socialmedia">
+				<a href="https://www.facebook.com/BrouwerijKwartje/"><img id="facebook" src="facebook.PNG" width="40" height="40" /></a>	
+				<a href="https://www.instagram.com/brouwerijkwartje/"><img id="instagram" src="instagram.png" width="40" height="40" /></a>
+				<a href="https://twitter.com/kwartjebier?lang=nl"><img id="twitter" src="twitter.png" width="43" height="40" /></a>
+			</div>		
+		</footer><!--einde footer-->
+		
+	</body>
+</html>
+		

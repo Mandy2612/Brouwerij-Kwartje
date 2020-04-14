@@ -1,0 +1,208 @@
+/* Hier wordt de body opgemaakt */
+body{ 
+	background-color: black;
+	background: url("foto2.png");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+} 
+
+
+/* Hier wordt alles geselecteerd */
+*{
+	margin:0;
+	padding:0;
+}
+
+/*Navigatie wordt hier opgemaakt*/
+nav{
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+/*De hoogte van de navigatie wordt aangepast*/
+nav ul{
+	margin-top: -10%;
+}
+
+/* Unordered list items positie wordt hier opgemaakt*/
+nav ul li{
+	float: left;
+	list-style: none;
+	position: relative;
+
+}
+
+/* List items krijgen deze kleur als er gehoverd wordt */
+nav ul li a:hover{
+	color: #A98700;
+}
+
+/*List items krijgen een opmaak */
+nav ul li a{
+	display: block;
+	font-family: arial;
+	color: white;
+	font-size: 12px;
+	padding: 15px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Dropdown 'Meer' wordt hier opgemaakt */
+nav ul li ul{
+	display:none;
+	position: absolute;
+	background-color: white;
+	border: 1px solid #A98700;
+	border-radius: 15px;
+	padding: 5px;	
+}
+
+/* Hover functie bij 'Meer' wordt aangemaakt */
+nav ul li:hover ul{
+	display:block;
+}
+
+/* Breedte van de dropdown box wordt opgemaakt */
+nav ul li ul li{
+	width: 130px;
+}
+
+/* List items van 'Meer' worden opgemaakt*/
+nav ul li ul li a{
+	padding: 8px 35px 8px 10px;
+	color: black;
+	font-family: serif;
+}
+
+/* De 'Home' in de navigatie wordt gekleurd om duidelijk te maken dat je nu op de homepage bent */
+#home{
+	color: #A98700;
+}
+
+
+/* De eerste zin wordt opgemaakt */
+#first{
+	color: #A98700;
+	text-align: center;
+	font-style: italic;
+	padding: 100px 50px 20px 50px;
+
+}
+
+/*Het tweede stukje tekst wordt opgemaakt */
+#paragraaf{
+	color: #A98700;
+	text-align: center;
+	font-family: serif;
+	font-size: 26px;
+	padding-top: -20px;
+	padding-bottom: 10px;
+	
+}
+
+/* Het linker bier wordt weergegeven en opgemaakt */
+.bierlinks{
+	width: 220px;
+	height: 395px;
+	background: url("bierlinks1.PNG");
+	background-repeat: no-repeat;
+	margin-left: 400px;
+	margin-top: -20px;
+	animation-name: cheers;
+	animation-duration: 3s;
+	animation-fill-mode: both;
+	
+}
+
+/* Het linker bier krijgt animatie */
+@keyframes cheers{
+	
+	from{ transform: translateX(-300px)}
+	to{ transform: translateX(80px)}
+}
+
+/* Het rechter bier wordt weergegeven en opgemaakt*/
+.bierrechts{
+	width: 220px;
+	height: 395px;
+	background: url("bierrechts1.PNG");
+	background-repeat: no-repeat;
+	margin-left: 600px;
+	margin-top: -440px;
+	animation-name: cheers2;
+	animation-duration: 3s;
+	animation-fill-mode: both;
+
+}	
+
+/* Het rechter bier krijgt animatie */
+@keyframes cheers2{
+	
+	from{ transform: translateX(350px)}
+	to{ transform: translateX(-30px)}
+}
+
+/* Dit is de footer styling*/
+footer{
+	background-color: #393939;
+	min-width: 430px;
+	margin-top: -6px;
+}
+
+/* Contact informatie wordt naast elkaar geplaatst*/
+.contact{
+	float: left;
+}
+
+/* Tekst van de kopjes in de footer worden opgemaakt */
+.adres, .aanmelden, .email{
+	color: white;
+	font-family: serif;
+	font-size: 15px;
+	padding-left: 170px;
+}
+
+/* Kopjes in de footer worden opgemaakt*/
+#adres, #aanmelden, #email{
+	color: #A98700;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+/* Aanmeld button wordt opgemaakt */
+#button{
+	border: 1px solid #A98700;
+	border-radius: 10px;
+	font-size: 12px;
+	color: #A98700;
+	background-color: white;
+	text-align: center;
+	padding: 7px 18px 7px 18px;
+	text-decoration: none;
+	margin-left: 34%;
+
+}
+
+/* Social media afbeeldingen krijgen een positie */
+.socialmedia{
+	padding-top: 8%;
+	padding-left: 44%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=" utf-8" />
+		<meta name=" viewport" content="width=device-width, initial-scale= 1.0" />
+		<title>Brouwerij Kwartje</title>
+		<link rel="stylesheet" type="text/css" href="review.css">	 
+		<script type="text/javascript">
+			function validation(){   //functie validation wordt aangemaakt zonder parameter
+			
+				var name = document.getElementById('name').value; //variabele name wordt aangemaakt en het element wordt aangeroepen met Id 'name'
+				var privacyverklaring = document.getElementById('privacyverklaring').value; //variabele privacyverklaring wordt aangemaakt en het element wordt aangeroepen met Id 'privacyverklaring'
+				
+				if (name == ""){   //Als het veld 'Naam' leeg is
+					document.getElementById('naam').innerHTML = "Uw naam is vereist*"; //geef melding
+						return false;
+				}
+				
+				 if(!document.getElementById('privacyverklaring').checked){  //Als de privacyverklaring niet is aangevinkt
+					document.getElementById("accepted").innerHTML="Accepteer de privacyverklaring*";   //geef melding
+					return false;
+				}
+				else { // Anders
+					alert("Uw review is verzonden!"); // geef melding dat review verzonden is
+				}
+			}
+		</script>
+	</head>
+	
+	<body>	
+		<!-- Hier wordt de header aangemaakt met de logo en navigatie erin -->
+		<header>
+			<nav>
+				<!--Logo afbeelding wordt toegevoegd-->
+				<center><img src="logo.png" width="178" height="140" align="middle"/></center>
+				<!-- Unordered list wordt aangemaakt -->
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="bieren.html">Bieren</a></li>
+					<li><a href="nonalcohol.html">0,0% Bieren</a></li> 
+						<li><a href="" id="meer">Meer</a>
+							<ul><!-- Unordered list van Meer wordt aangemaakt -->
+								<li><a href="bierproeverij.html">Bierproeverij</a></li>
+								<li><a href="review.html">Review</a></li>
+								<li><a href="overons.html">Over Ons</a></li>
+							</ul>
+						</li>
+				</ul>
+			</nav>
+		</header><!-- Einde header -->
+		
+		<main><!-- Dit is de main content -->
+		<h1>REVIEW</h1>
+		<span id="titel"> _________________</span>
+		<section><!-- Hier wordt een sectie aangemaakt -->
+		<!--Hieronder worden reviews van anderen weergegevn -->
+		<div class="comment">
+		<p>Sara<br><br>
+		★★★★★<br><br>
+		Heerlijk genoten van de bieren. Heel<br>
+		fijn dat er ook 0,0% bieren te proeven zijn!
+		</p>
+		</div>
+		
+		<div class="comment">
+		<p>Dennis<br><br>
+		★★★★<br><br>
+		Lekker kunnen drinken en vriendelijke personeel!<br>
+		Ik kom zeker vaker terug.
+		</p>
+		</div>
+		
+		<div class="comment">
+		<p>Demi<br><br>
+		★★★★★<br><br>
+		Fijn om 0,0% bier te kunnen proeven. Het was super
+		lekker.
+		</p>
+		</div>
+		
+		<div class="comment">
+		<p>Dylan<br><br>
+		★★<br><br>
+		Ik vond het niet mijn ding
+		</p>
+		</div>
+		
+		<div class="comment">
+		<p>Anisa<br><br>
+		★★★★<br><br>
+		Heerlijk nieuwe biertjes geproefd en ook fijn dat ze alcohol <br>
+		vrije bier hadden!
+		</p>
+		</div>
+		</section><!--Einde sectie reviews -->
+		
+		<aside><!-- Aside wordt aangemaakt voor review formulier -->
+		<form method="get" action="#" onsubmit="return validation()" >
+			<p>SCRHIJF JE REVIEW!</p><br><br>
+			
+				<!-- Naam veld wordt aangemaakt -->
+				<label for="name">NAAM*</label><br>
+				<input type="text" id="name"  /><br>
+				<span id="naam" class="validation"></span>
+				<br><br><br><br>
+				
+					
+				<!--Email veld wordt aangemaakt -->	
+				<label for="email">E-MAIL</label><br>
+				<input type="email" id="email" />
+				<br><br><br><br>
+				
+				<!-- Ster rating wordt aangemaakt -->
+				<label for="sterren">AANTAL STERREN*</label><br>
+				<p id="rating">★★★★★</p>
+				<br><br><br>
+				
+				<!-- Opmerking tekstvak wordt aangemaakt -->
+				<label for="opmerking">OPMERKING</label><br><br>
+				<textarea id="opmerking" rows="6" cols="40" placeholder="Typ hier uw tekst..."></textarea>
+				<br><br><br><br>
+				
+					
+				<!-- Privacyverklaring check wordt aangemaakt-->
+				<label for="privacyverklaring"> PRIVACYVERKLARING*</label>
+				<input type="checkbox" id="privacyverklaring" name="privacyverklaring" value="privacyverklaring" ><br>
+				<span id="accepted" class="validation"></span>
+				<br><br><br>
+				
+				<!-- Verzend button wordt aangemaakt-->
+				<button type="submit">Verzenden >></button>
+		</form>	
+		</aside><!-- Einde Review formulier -->
+		</main><!--Einde main content-->
+		
+		<!--Footer wordt aangemaakt met contactinformatie erin -->
+		<footer>
+			<!-- Adres gegevens wordt hier getoond-->
+			<section>
+				<div class="contact adres">
+					<p id="adres">ADRES</p><br>
+					<p>Zamenhofstraat 90 <br>
+					2518LB Den Haag</p>
+				</div>
+			</section>
+			
+			<!--Aanmeldbutton wordt hier nogmaals weergegeven -->
+			<section>
+				<div class="contact aanmelden">
+					<p id="aanmelden">MELD JE AAN VOOR EEN PROEVERIJ!</p><br>
+					<a href="bierproeverij.html" id="button"> AANMELDEN >></a>
+				</div>
+			</section>
+			
+			<!--Emailadres wordt hier getoond-->
+			<section>
+				<div class="contact email">
+					<p id="email">EMAIL</p><br>
+					<p>brouwerijkwartje@gmail.com</p>
+				</div>
+			</section>
+			
+			<!--Social media links worden hier getoond-->
+			<div class="socialmedia">
+				<a href="https://www.facebook.com/BrouwerijKwartje/"><img id="facebook" src="facebook.PNG" width="40" height="40" /></a>	
+				<a href="https://www.instagram.com/brouwerijkwartje/"><img id="instagram" src="instagram.png" width="40" height="40" /></a>
+				<a href="https://twitter.com/kwartjebier?lang=nl"><img id="twitter" src="twitter.png" width="43" height="40" /></a>
+			</div>		
+		</footer><!--einde footer-->	
+	</body>
+</html>
+		

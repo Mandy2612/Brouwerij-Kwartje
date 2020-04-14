@@ -1,0 +1,249 @@
+/* Hier wordt de body opgemaakt */
+body{
+	background-image: url("bierenbg.PNG");
+	background-size: 1270px 930px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+
+/* Hier wordt alles geselecteerd */
+*{
+	margin:0;
+	padding:0;
+}
+
+/*Navigatie wordt hier opgemaakt*/
+nav{
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+/*De hoogte van de navigatie wordt aangepast*/
+nav ul{
+	margin-top: -10%;
+}
+
+/* Unordered list items positie wordt hier opgemaakt*/
+nav ul li{
+	float: left;
+	list-style: none;
+	position: relative;
+
+}
+
+/* List items krijgen deze kleur als er gehoverd wordt */
+nav ul li a:hover{
+	color: #A98700;
+}
+
+/*List items krijgen een opmaak */
+nav ul li a{
+	display: block;
+	font-family: arial;
+	color: white;
+	font-size: 12px;
+	padding: 15px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Dropdown 'Meer' wordt hier opgemaakt */
+nav ul li ul{
+	display:none;
+	position: absolute;
+	background-color: white;
+	border: 1px solid #A98700;
+	border-radius: 15px;
+	padding: 5px;	
+}
+
+/* Hover functie bij 'Meer' wordt aangemaakt */
+nav ul li:hover ul{
+	display:block;
+}
+
+/* Breedte van de dropdown box wordt opgemaakt */
+nav ul li ul li{
+	width: 130px;
+}
+
+/* List items van 'Meer' worden opgemaakt*/
+nav ul li ul li a{
+	padding: 8px 35px 8px 10px;
+	color: black;
+	font-family: serif;
+}
+
+/* De 'Bieren' in de navigatie wordt gekleurd om duidelijk te maken dat je nu op de bieren pagina bent */
+#bieren{
+	color: #A98700;
+
+}
+
+/* De titel wordt hier opgemaakt*/
+h1{
+	color: white;
+	margin-left: 75%;
+	margin-top: 8%;
+	font-style: italic;
+	font-size: 17px;
+}
+
+/*De lijn onder de titel wordt opgemaakt*/
+span{
+	color: #A98700;
+	margin-left: 70%;
+}
+
+
+/* introductie tekst wordt opgemaakt*/
+.intro{
+	font-family: arial, verdana;
+	font-style: italic;
+	color: white;
+	font-size: 13.5px;
+	padding-top: 5%;
+	width: 65%;
+	margin-left: 15%;
+	
+}
+
+/*Verwijzing naar '0,0% Bieren' pagina krijgt positie*/
+#collectie{
+	margin-left: 75%;
+	margin-top: 10%
+	
+}
+
+/*Tekst van de verwijzing wordt opgemaakt*/
+p a{
+	color: white;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 14px;
+}
+
+/*Tekst van de verwijzing krijgt hover functie met kleur*/
+p a:hover{
+	color: #A98700;
+}
+
+/* Alle bieren worden opgemaakt*/
+.container{
+  position: relative;
+  width: 33%;
+  float: left;
+  margin-top: 5%;
+}
+
+/*Alle bieren afbeeldingen worden opgemaakt*/
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+/* De plek waar de tekst op staat wordt opgemaakt*/
+.middle {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Hover over de bier wordt aangemaakt en de bier wordt transparanter */
+.container:hover .image {
+  opacity: 0.3;
+}
+
+/* Tekst over de bier komt tevoorschijn als er gehoverd wordt*/
+.container:hover .middle {
+  opacity: 1;
+}
+
+/*Tekst van de bieren worden opgemaakt*/
+.text {
+	color: white;
+	font-size: 15px;
+	text-align:center;
+	width: 90%;
+	height: 10%;
+	margin-left: 7%;
+	margin-bottom: 30%;
+	
+}
+
+/* Namen van de bieren worden opgemaakt*/
+figcaption{
+	color: white;
+	text-transform: uppercase;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 12px;
+	text-align:center;
+	margin-top: -15%;
+	
+}
+
+
+/* Dit is de footer styling*/
+footer{
+	background-color: #393939;
+	min-width: 430px;
+	margin-top: 95%;
+}
+
+/* Contact informatie wordt naast elkaar geplaatst*/
+.contact{
+	float: left;
+}
+
+/* Tekst van de kopjes in de footer worden opgemaakt */
+.adres, .aanmelden, .email{
+	color: white;
+	font-family: serif;
+	font-size: 15px;
+	padding-left: 170px;
+}
+
+/* Kopjes in de footer worden opgemaakt*/
+#adres, #aanmelden, #email{
+	color: #A98700;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+/* Aanmeld button wordt opgemaakt */
+#button{
+	border: 1px solid #A98700;
+	border-radius: 10px;
+	font-size: 12px;
+	color: #A98700;
+	background-color: white;
+	text-align: center;
+	padding: 7px 18px 7px 18px;
+	text-decoration: none;
+	margin-left: 34%;
+
+}
+
+/* Social media afbeeldingen krijgen een positie */
+.socialmedia{
+	padding-top: 8%;
+	padding-left: 44%;
+}
+
+
+
+
+
+
+
+

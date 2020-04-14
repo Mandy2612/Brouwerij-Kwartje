@@ -1,0 +1,207 @@
+/* Hier wordt de body opgemaakt */
+body{
+	background-image: url("bierproeverijbg.PNG");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+}
+
+/* Hier wordt alles geselecteerd */
+*{
+	margin:0;
+	padding:0;
+}
+
+/*Navigatie wordt hier opgemaakt*/
+nav{
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+/*De hoogte van de navigatie wordt aangepast*/
+nav ul{
+	margin-top: -10%;
+}
+
+/* Unordered list items positie wordt hier opgemaakt*/
+nav ul li{
+	float: left;
+	list-style: none;
+	position: relative;
+
+}
+
+/* List items krijgen deze kleur als er gehoverd wordt */
+nav ul li a:hover{
+	color: #A98700;
+}
+
+/*List items krijgen een opmaak */
+nav ul li a{
+	display: block;
+	font-family: arial;
+	color: white;
+	font-size: 12px;
+	padding: 15px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Dropdown 'Meer' wordt hier opgemaakt */
+nav ul li ul{
+	display:none;
+	position: absolute;
+	background-color: white;
+	border: 1px solid #A98700;
+	border-radius: 15px;
+	padding: 5px;	
+}
+
+/* Hover functie bij 'Meer' wordt aangemaakt */
+nav ul li:hover ul{
+	display:block;
+}
+
+/* Breedte van de dropdown box wordt opgemaakt */
+nav ul li ul li{
+	width: 130px;
+}
+
+/* List items van 'Meer' worden opgemaakt*/
+nav ul li ul li a{
+	padding: 8px 35px 8px 10px;
+	color: black;
+	font-family: serif;
+}
+
+/* Titel Bierproeverij wordt opgemaakt*/
+h1{
+	color: white;
+	margin-left: 75%;
+	margin-top: 8%;
+	font-style: italic;
+	font-size: 17px;
+	text-transform: uppercase;
+}
+
+/* De lijn onder de titel wordt opgemaakt */
+#titel{
+	color: #A98700;
+	margin-left: 73%;
+}
+
+/* Stukje introductie tekst wordt opgemaakt*/
+.text{
+	color: white;
+	font-family: arial, verdana, sans-serif;
+	font-size: 13px;
+	padding: 60px 50px 20px 70px;
+	width: 75%;
+}
+
+/* De tarieven en voorwaarden stukjes worden opgemaakt*/
+.tarieven_voorwaarden{
+	color: white;
+	font-style: italic;
+	font-family:arial, verdana, sans-serif;
+	font-size: 13px;
+	padding: 60px 50px 20px 70px;
+}
+
+/* De lijn die de scheiding maakt tussen de informatie en formulier wordt opgemaakt */
+span{
+	color: #A98700;
+	margin: 5px 12%;
+}
+
+/* Het gehele formulier wordt opgemaakt*/
+.form{
+	margin-left: 5%;
+	color: white;
+	font-family: arial,verdana, sans-serif;
+	font-size: 13px;
+}
+
+/* De invoervelden worden opgemaakt*/
+input {
+  width: 10%;
+  padding: 5px 20px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+/* Alle select opties krijgen deze kleur*/
+option{
+	color: #a98700;
+}
+
+/* Verzend button wordt hier opgemaakt*/
+ button{
+	background-color: white;
+	color: #A98700;
+	border: 1px solid #A98700;
+	border-radius: 10px;
+	width: 13%;
+	height: 30px;
+	text-align: middle;
+	margin-left: 80%;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+/* De melding van de verplichte velden wordt opgemaakt */
+.validation{
+	color: white;
+	font-style: italic;
+}
+
+/* Dit is de footer styling*/
+footer{
+	background-color: #393939;
+	min-width: 430px;
+	margin-top: 10%;
+}
+
+/* Contact informatie worden naast elkaar geplaatst*/
+.contact{
+	float: left;
+}
+
+/* Tekst van de kopjes in de footer worden opgemaakt */
+.adres, .aanmelden, .email{
+	color: white;
+	font-family: serif;
+	font-size: 15px;
+	padding-left: 170px;
+}
+
+/* Kopjes in de footer worden opgemaakt*/
+#adres, #aanmelden, #email{
+	color: #A98700;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+/* Aanmeld button wordt opgemaakt */
+#button{
+	border: 1px solid #A98700;
+	border-radius: 10px;
+	font-size: 12px;
+	color: #A98700;
+	background-color: white;
+	text-align: center;
+	padding: 7px 18px 7px 18px;
+	text-decoration: none;
+	margin-left: 34%;
+
+}
+
+/* Social media afbeeldingen krijgen een positie */
+.socialmedia{
+	padding-top: 8%;
+	padding-left: 44%;
+}
